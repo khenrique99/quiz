@@ -18,9 +18,20 @@
            Esse jogo tem intúito de trazer um relatório de análises de decisões baseadas na idades (são fatores fictícios que não promovemos a discriminação de qualqueis tipos)!
         </p>
         <div class="imgHome"></div>
-        <h1>Para procedermos, faça o login ou se cadastre!</h1>
+        @auth
+            <h1>Navegue nos módulos abaixo</h1>
+        @endauth
+
+        @guest
+            <h1>Faça o login ou se cadastre abaixo</h1>
+        @endguest
     </div>
 
+    @auth
+
+    @endauth
+
+    @guest
     <div class="divGridAutenticacao">
         <div class="divLogin">
             <h1>Acesse sua conta</h1>
@@ -82,29 +93,40 @@
                     @csrf
 
                     <div>
-                        Seu nome
-                    </div>
-                    <div>
-                        <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                        <p>Seu nome</p>
                     </div>
 
                     <div>
-                        E-mail
-                    </div>
-                    <div class="mt-4">
-                        <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                        <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" required/>
                     </div>
 
                     <div>
-                        Senha
-                    </div>
-                    <div class="mt-4">
-                        <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+                        <p>Sua idade</p>
                     </div>
 
-                    <div>Confirme a senha</div>
+                    <div>
+                        <input type="number" name="idade" id="idade" required/>
+                    </div>
+
+                    <div>
+                        <p>E-mail</p>
+                    </div>
                     <div class="mt-4">
-                        <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+                        <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" required/>
+                    </div>
+
+                    <div>
+                        <p>Senha</p>
+                    </div>
+                    <div class="mt-4">
+                        <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required/>
+                    </div>
+
+                    <div>
+                        <p>Confirme a senha</p>
+                    </div>
+                    <div class="mt-4">
+                        <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required/>
                     </div>
 
                     @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
@@ -124,6 +146,8 @@
                 </form>
             </x-jet-authentication-card>
         </div>
+    @endguest
+
     </div>
 
     </body>
