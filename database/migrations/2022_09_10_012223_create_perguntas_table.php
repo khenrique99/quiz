@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('perguntas', function (Blueprint $table) {
 			$table->increments('id');
-            $table->integer('id_users')->unsigned()->nullable();
-            $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('titulo')->nullable();
+            $table->integer('grupo')->nullable();
             $table->longtext('pergunta')->nullable();
             $table->string('image')->nullable();
             $table->string('resposta1')->nullable();
