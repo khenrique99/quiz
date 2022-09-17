@@ -14,4 +14,9 @@ class quizController extends Controller
         
         return view ("/welcome");
     }
+
+    public function dashboard() {
+        
+        return view ("/dashboard");
+    }
 }

@@ -18,13 +18,23 @@
            Esse jogo tem intúito de trazer um relatório de análises de decisões baseadas na idades (são fatores fictícios que não promovemos a discriminação de qualqueis tipos)!
         </p>
         <div class="imgHome"></div>
-        @auth
-            <h1>Navegue nos módulos abaixo</h1>
-        @endauth
 
         @guest
             <h1>Faça o login ou se cadastre abaixo</h1>
         @endguest
+    </div>
+
+
+    <div class="divAdminitrator">
+        <div>
+            <a href="#">CADASTRAR PERGUNTAS</a>
+        </div>
+        <div>
+            <a href="#">GERENCIAR USUARIOS</a>
+        </div>
+        <div>
+            <a href="#">RELATÓRIOS</a>
+        </div>
     </div>
 
     @auth
