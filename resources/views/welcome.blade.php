@@ -24,21 +24,31 @@
         @endguest
     </div>
 
-
-    <div class="divAdminitrator">
-        <div>
-            <a href="#">CADASTRAR PERGUNTAS</a>
-        </div>
-        <div>
-            <a href="#">GERENCIAR USUARIOS</a>
-        </div>
-        <div>
-            <a href="#">RELATÓRIOS</a>
-        </div>
-    </div>
-
     @auth
+        <div class="divAdminitrator">
+            <div>
+                <a href="#">CADASTRAR PERGUNTAS</a>
+            </div>
+            <div>
+                <a href="#">GERENCIAR USUARIOS</a>
+            </div>
+            <div>
+                <a href="#">RELATÓRIOS</a>
+            </div>
+            <div>
+                <a href="#">
+                    <!-- Authentication -->
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
 
+                        <x-jet-dropdown-link href="{{ route('logout') }}"
+                                    @click.prevent="$root.submit();">
+                            {{ __('SAIR DA CONTA') }}
+                        </x-jet-dropdown-link>
+                    </form>
+                </a>
+            </div>
+        </div>
     @endauth
 
     @guest
@@ -156,8 +166,12 @@
                 </form>
             </x-jet-authentication-card>
         </div>
+    </div>
     @endguest
 
+    <div class="divRodape">
+        <h1>Pair programming (2022) <span>Developed by:</span></h1>
+        <h3>Guilherme Abel - Senior Front End <br> Kelvin Henrique - Senior Back End</h3>
     </div>
 
     </body>
