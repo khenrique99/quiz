@@ -25,30 +25,67 @@
     </div>
 
     @auth
-        <div class="divAdminitrator">
-            <div>
-                <a href="#">CADASTRAR PERGUNTAS</a>
+        @if (Auth::user()->tipo_usuario == 99)
+            <div class="divAdminitrator">
+                <div>
+                    <a href="#">CADASTRAR PERGUNTAS</a>
+                </div>
+                <div>
+                    <a href="#">GERENCIAR USUARIOS</a>
+                </div>
+                <div>
+                    <a href="#">RELATÓRIOS</a>
+                </div>
+                <div>
+                    <a href="#">
+                        <!-- Authentication -->
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();this.closest('form').submit();">SAIR DA CONTA</a>
+                        </form>
+                    </a>
+                </div>
             </div>
-            <div>
-                <a href="#">GERENCIAR USUARIOS</a>
+            <div class="divAdminitratorGeral">
+                <h1>
+                    Seja Bem-Vindo(a)
+                    <span>{{Auth::user()->name}}</span>
+                </h1>
+                <div>
+                    <p>Atualmente temos
+                        @foreach ($geralUser as $geralUser)
+                            <span>{{$geralUser->total}}
+                                @if ($geralUser->total <=1)
+                                    Usuário Administrador
+                                @else
+                                    Usuários Administradores
+                                @endif
+                            </span>
+                        @endforeach
+                        e
+                        @foreach ($geralAdmin as $geralAdmin)
+                            <span>{{$geralAdmin->total}}
+                                @if ($geralAdmin->total <=1)
+                                    Usuário Comum
+                                @else
+                                    Usuários Comuns
+                                @endif
+                            </span>
+                        @endforeach
+                    </p>
+                    <p>
+                        @foreach ($geralPergunta as $geralPergunta)
+                            <span>{{$geralPergunta->total}}</span>
+                        @endforeach
+                        @if ($geralPergunta->total <= 1)
+                            Pergunta cadastrada no sistema
+                        @else
+                            Perguntas cadastradas no sistema
+                        @endif
+                    </p>
+                </div>
             </div>
-            <div>
-                <a href="#">RELATÓRIOS</a>
-            </div>
-            <div>
-                <a href="#">
-                    <!-- Authentication -->
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-
-                        <x-jet-dropdown-link href="{{ route('logout') }}"
-                                    @click.prevent="$root.submit();">
-                            {{ __('SAIR DA CONTA') }}
-                        </x-jet-dropdown-link>
-                    </form>
-                </a>
-            </div>
-        </div>
+        @endif
     @endauth
 
     @guest
