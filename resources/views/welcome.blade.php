@@ -19,9 +19,6 @@
            Esse jogo tem intúito de trazer um relatório de análises de decisões baseadas na idades (são fatores fictícios que não promovemos a discriminação de qualqueis tipos)!
         </p>
         <div class="imgHome"></div>
-        @auth
-            <h1>Navegue nos módulos abaixo</h1>
-        @endauth
 
         @guest
             <h1>Faça o login ou se cadastre abaixo</h1>
@@ -29,7 +26,69 @@
     </div>
 
     @auth
-
+        @if (Auth::user()->tipo_usuario == 99)
+            <div class="divAdminitrator">
+                <div>
+                    <a href="/perguntas/cadastrar">CADASTRAR PERGUNTAS</a>
+                </div>
+                <div>
+                    <a href="/perguntas/visualizar">VISUALIZAR PERGUNTAS</a>
+                </div>
+                <div>
+                    <a href="#">GERENCIAR USUARIOS</a>
+                </div>
+                <div>
+                    <a href="#">RELATÓRIOS</a>
+                </div>
+                <div>
+                    <a href="#">
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();this.closest('form').submit();">SAIR DA CONTA</a>
+                        </form>
+                    </a>
+                </div>
+            </div>
+            <div class="divAdminitratorGeral">
+                <h1>
+                    Seja Bem-Vindo(a)
+                    <span>{{Auth::user()->name}}</span>
+                </h1>
+                <div>
+                    <p>Atualmente temos
+                        @foreach ($geralUser as $geralUser)
+                            <span>{{$geralUser->total}}
+                                @if ($geralUser->total <=1)
+                                    Usuário Administrador
+                                @else
+                                    Usuários Administradores
+                                @endif
+                            </span>
+                        @endforeach
+                        e
+                        @foreach ($geralAdmin as $geralAdmin)
+                            <span>{{$geralAdmin->total}}
+                                @if ($geralAdmin->total <=1)
+                                    Usuário Comum
+                                @else
+                                    Usuários Comuns
+                                @endif
+                            </span>
+                        @endforeach
+                    </p>
+                    <p>
+                        @foreach ($geralPergunta as $geralPergunta)
+                            <span>{{$geralPergunta->total}}</span>
+                        @endforeach
+                        @if ($geralPergunta->total <= 1)
+                            Pergunta cadastrada no sistema
+                        @else
+                            Perguntas cadastradas no sistema
+                        @endif
+                    </p>
+                </div>
+            </div>
+        @endif
     @endauth
 
     @guest
@@ -147,8 +206,12 @@
                 </form>
             </x-jet-authentication-card>
         </div>
+    </div>
     @endguest
 
+    <div class="divRodape">
+        <h1>Pair programming (2022) <span>Developed by:</span></h1>
+        <h3>Guilherme Abel - Senior Front End <br> Kelvin Henrique - Senior Back End</h3>
     </div>
 
     </body>
