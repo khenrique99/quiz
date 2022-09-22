@@ -11,6 +11,7 @@
     </head>
     <body>
 
+
     <div class="divHome">
         <h1>QUIZ - Perguntas dificeis</h1>
         <p>Um quiz que não existem perguntas certas ou erradas, você vai se deparar com perguntas que irão ser respondidas com "coração" e/ou consciência de cada um!
@@ -28,7 +29,10 @@
         @if (Auth::user()->tipo_usuario == 99)
             <div class="divAdminitrator">
                 <div>
-                    <a href="#">CADASTRAR PERGUNTAS</a>
+                    <a href="/perguntas/cadastrar">CADASTRAR PERGUNTAS</a>
+                </div>
+                <div>
+                    <a href="/perguntas/visualizar">VISUALIZAR PERGUNTAS</a>
                 </div>
                 <div>
                     <a href="#">GERENCIAR USUARIOS</a>
@@ -38,7 +42,6 @@
                 </div>
                 <div>
                     <a href="#">
-                        <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <a href="{{ route('logout') }}" onclick="event.preventDefault();this.closest('form').submit();">SAIR DA CONTA</a>
@@ -199,7 +202,7 @@
                     <div>
                         <x-jet-button class="ml-4">Cadastrar</x-jet-button>
                     </div>
-                    
+
                 </form>
             </x-jet-authentication-card>
         </div>
