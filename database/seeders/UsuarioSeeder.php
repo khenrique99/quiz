@@ -25,8 +25,8 @@ class UsuarioSeeder extends Seeder
         DB::table('users')->insert([
             'tipo_usuario' => '99',
             'name' => 'Guilherme Abel',
-            'idade' => '19990217',
-            'email' => 'kelvin5henri@gmail.com',
+            'idade' => '20020123',
+            'email' => 'guilhermeabel.contato@gmail.com',
             'password' => '$2y$10$qLzqTOG4tdfFJwhpd2VJWOxVsaN56vr5Oo7gh7G03NXqiY/.bXLwi',
         ]);
     }

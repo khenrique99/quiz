@@ -1,0 +1,56 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+* body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ion-padrao {
+    font-size: 25px;
+    color: rgb(24, 153, 240);
+    margin-top: 4px;
+    margin-right: 5px;
+    float: left;
+}
+
+.ion-personar {
+    font-size: 20px;
+    color: rgb(24, 153, 240);
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.divNav {
+    background-color: rgb(26, 26, 26);
+    width: 100%;
+    min-height: 120px;
+    margin: 0 auto;
+    margin-top: 0px;
+}
+
+.divNav h1 {
+    margin-top: 0px;
+    font-size: 25px;
+    padding-top: 20px;
+    margin-left: 30px;
+    text-decoration: none;
+    color: rgb(24, 153, 240);
+}
+
+.divNav h1 a{
+    text-decoration: none;
+    color: rgb(24, 153, 240);
+}
+
+.divNav h1 a:hover , .divNav h1 a:hover ion-icon{
+    color: white;
+}
+
+.tituloPadrao {
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(24,24,24);
+}

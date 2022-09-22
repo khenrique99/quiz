@@ -24,4 +24,14 @@ class quizController extends Controller
         
         return view ("/dashboard");
     }
+
+    public function cadastrar() {
+        
+        return view ("perguntas.cadastrar");
+    }
+
+    public function visualizar() {
+        
+        return view ("perguntas.visualizar");
+    }
 }
