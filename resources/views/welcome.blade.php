@@ -87,6 +87,17 @@
                     </p>
                 </div>
             </div>
+        @else (Auth::user()->tipo_usuario <> 99)
+            <div class="divHomeModulos">
+                <h1>Navegue entre os módulos abaixo</h1>
+                @foreach ($grupos as $grupos)
+                    <div class="divGrupoModulos">
+                        <img src="../image/grupos/{{$grupos->image}}" alt="imagem">
+                        <p>{{$grupos->grupo}}</p>
+                        <a href="#">Visualizar</a>
+                    </div>
+                @endforeach
+            </div>
         @endif
     @endauth
 

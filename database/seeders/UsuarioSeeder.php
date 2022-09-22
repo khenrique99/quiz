@@ -29,5 +29,12 @@ class UsuarioSeeder extends Seeder
             'email' => 'guilhermeabel.contato@gmail.com',
             'password' => '$2y$10$qLzqTOG4tdfFJwhpd2VJWOxVsaN56vr5Oo7gh7G03NXqiY/.bXLwi',
         ]);
+        DB::table('users')->insert([
+            'tipo_usuario' => '1',
+            'name' => 'TESTE USUARIO',
+            'idade' => '20220922',
+            'email' => 'teste@teste.com',
+            'password' => '$2y$10$qLzqTOG4tdfFJwhpd2VJWOxVsaN56vr5Oo7gh7G03NXqiY/.bXLwi',
+        ]);
     }
 }

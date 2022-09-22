@@ -40,5 +40,15 @@ class PerguntasSeeder extends Seeder
             'grupo'     => 'Policial',
             'image'     => 'policial.png',
         ]);
+        DB::table('grupos')->insert([
+            'id'        => '9',
+            'grupo'     => 'Cotidiano',
+            'image'     => 'equipe.png',
+        ]);
+        DB::table('grupos')->insert([
+            'id'        => '10',
+            'grupo'     => 'Meio Ambiente',
+            'image'     => 'ambiente.png',
+        ]);
     }
 }
