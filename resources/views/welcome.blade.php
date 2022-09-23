@@ -94,7 +94,7 @@
                     <div class="divGrupoModulos">
                         <img src="../image/grupos/{{$grupos->image}}" alt="imagem">
                         <p>{{$grupos->grupo}}</p>
-                        <a href="#">Visualizar</a>
+                        <a href="/perguntas/conteudo/{{$grupos->id}}">Visualizar</a>
                     </div>
                 @endforeach
             </div>

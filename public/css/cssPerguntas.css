@@ -54,3 +54,75 @@
     margin-top: 50px;
     color: rgb(24,24,24);
 }
+
+.gridModulos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 1310px;
+    margin: auto;
+}
+
+.gridModulos a {
+    text-decoration: none;
+}
+
+.gridModulos a:hover div{
+    background-color: rgba(252, 233, 255, 0.436);
+}
+
+.divModulos {
+    width: 400px;
+    height: auto;
+    border: 1px solid silver;
+    border-radius: 7px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.divModulos h1 {
+    text-align: center;
+    font-size: 27px;
+    color: rgb(23, 82, 138);
+}
+
+.divModulos p {
+    font-size: 22px;
+    text-align: center;
+    color: rgb(20,20,20);
+}
+
+.gerenciamentoModulos {
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(20,20,20);
+}
+
+.gerenciamentoModulos h1 {
+    text-align: center;
+    color: rgb(23, 82, 138);
+    font-weight: normal;
+    margin-top: 60px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+.gerenciamentoModulos ul {
+    font-size: 22px;
+    list-style: none;
+    margin-left: -40px;
+}
+
+.gerenciamentoModulos ul li {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(244, 244, 244);
+}
+
+.gerenciamentoModulos ul li span {
+    font-weight: bolder;
+    color: rgb(46, 148, 46)
+}
