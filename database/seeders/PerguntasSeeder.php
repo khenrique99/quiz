@@ -67,5 +67,26 @@ class PerguntasSeeder extends Seeder
             'resposta1'     => 'DAR A PROMOÇÃO PARA MARCELO',
             'resposta2'     => 'DAR A PROMOÇÃO PARA JOÃO',
         ]);
+        DB::table('perguntas')->insert([
+            'grupo'     => '9',
+            'titulo'     => 'Os invasores.',
+            'pergunta'     => 'Você é maquinista de um trem e hoje é dia de manutenção na linha ferroviaria. Tem 2 colegas de trabalho realizando a manutenção na trilha da ponte, de repente seu chefe avisa que 5 invasores conseguiram entrar e foram avistados pelas câmeras no tunel. Você tem que escolher rápido, na sua frente a uma divisão de trilhos, você vai em direção ao seus colegas que estão fazendo a manutenção na ponte ou vai em direção a os invasores? Em qualquer lado que escolher, as chances se sobrevivência são quase 0% poís não há áreas de escape!',
+            'resposta1'     => 'MATAR OS INVASORES',
+            'resposta2'     => 'MATAR OS COLEGAS DE TRABALHO',
+        ]);
+        DB::table('perguntas')->insert([
+            'grupo'     => '9',
+            'titulo'     => 'Sua vida, suas regras!',
+            'pergunta'     => 'Você é maquinista de um bonde e percebe que no centro da cidade está acontecendo um protesto sobre campanhas políticas, você está na descida e já consegue avistar a multidão, você não consegue desviar a rota e por forçar demais o bonde acaba perdendo os freios, a única saida é puxar a alavanca de emergência com que faz o bonde saia dos trilhos e a velocidade marcada no painel são de 70km/h. O que você faz?',
+            'resposta1'     => 'PUXAR A ALAVANCA E REZAR PARA SOBREVIVER',
+            'resposta2'     => 'DEIXAR O BONDE BATER NA MULTIDÃO, POIS A CULPA NÃO ERA SUA',
+        ]);
+        DB::table('perguntas')->insert([
+            'grupo'     => '9',
+            'titulo'     => 'O melhor amigo.',
+            'pergunta'     => 'Você acabou de deixar seu melhor amigo na casa dele depois de uma festa na casa de outro amigo. Na volta para sua casa você se depara com a namorada de seu melhor amigo abraçando e beijando outro cara. O que você faz?',
+            'resposta1'     => 'CONTAR PARA O MELHOR AMIGO',
+            'resposta2'     => 'NÃO DIZER NADA',
+        ]);
     }
 }
