@@ -55,7 +55,7 @@ class PerguntasSeeder extends Seeder
         // CREATE HISTORIA COTIDIANO
         DB::table('perguntas')->insert([
             'grupo'     => '9',
-            'titulo'     => 'Toda a ajuda é Bem-Vinda.',
+            'titulo'     => 'Toda ajuda é Bem-Vinda.',
             'pergunta'     => 'Você está caminhando em um domingo de manhã no parque de sua cidade quando de repente, você avista duas pessoas, uma criança (7 anos) e um mendigo (53 anos). Ambos estão morrendo de fome e não comem nada a dias... Você só tem dinheiro pra comprar um lanche. Para quem você escolhe dar o lanche?',
             'resposta1'     => 'DAR O LANCHE PARA A CRIANÇA',
             'resposta2'     => 'DAR O LANCHE PARA O MENDIGO',
@@ -87,6 +87,13 @@ class PerguntasSeeder extends Seeder
             'pergunta'     => 'Você acabou de deixar seu melhor amigo na casa dele depois de uma festa na casa de outro amigo. Na volta para sua casa você se depara com a namorada de seu melhor amigo abraçando e beijando outro cara. O que você faz?',
             'resposta1'     => 'CONTAR PARA O MELHOR AMIGO',
             'resposta2'     => 'NÃO DIZER NADA',
+        ]);
+        DB::table('perguntas')->insert([
+            'grupo'     => '9',
+            'titulo'     => 'Amigos amigos, negócios a parte!',
+            'pergunta'     => 'Você e seu amigo Mayke abriram uma empresa de transportes chamada "WAYCAMINHO" e vocês estão dando uma palestra para uma outra empresa no mesmo ramo. Mayke começa a mentir sobre a politica e gestão da "WAYCAMINHO" para tirar vantagens de seus concorrentes. Você imediatamente se sente desconfortável com a situação. O que você faria?',
+            'resposta1'     => 'TOMA A FRENTE DA PALESTRA E TENTAR MUDAR DE ASSUNTO',
+            'resposta2'     => 'DEIXA MAYKE FALAR O QUE QUISER',
         ]);
     }
 }

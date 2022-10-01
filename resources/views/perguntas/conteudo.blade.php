@@ -27,7 +27,7 @@
     </div>
     <div class="gridModulos">
         @foreach ($total as $total)
-            <a href="#">
+            <a href="/perguntas/especifica/{{$total->id}}">
                 <div class="divModulos">
                     <h1>({{$total->grupo}}.{{$total->id}})</h1>
                     <p>{{$total->titulo}}</p>

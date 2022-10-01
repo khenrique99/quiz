@@ -11,6 +11,7 @@ Route::get('/dashboard', [quizController::class, 'dashboard']);
 Route::get('/perguntas/cadastrar', [quizController::class, 'cadastrar']);
 Route::get('/perguntas/visualizar', [quizController::class, 'visualizar']);
 Route::get('/perguntas/conteudo/{id}', [quizController::class, 'conteudo']);
+Route::get('/perguntas/especifica/{id}', [quizController::class, 'especifica']);
 
 Route::post('/register', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 

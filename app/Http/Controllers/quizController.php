@@ -44,4 +44,11 @@ class quizController extends Controller
 
         return view ('perguntas.conteudo', ['id' => $id], compact ('perguntas','total','totalpergunta'));
     }
+    
+    public function especifica($id) {
+
+        $pergunta   = db::Select('select * from perguntas where id='.$id);
+        
+        return view ('perguntas.especifica', ['id' => $id], compact ('pergunta'));
+    }
 }
