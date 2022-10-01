@@ -185,3 +185,58 @@
     color: rgb(143, 184, 82);
     font-weight: bolder;
 }
+
+.divHomeModulos h1{
+    text-align: center;
+    color: rgb(23, 82, 138);
+    font-weight: normal;
+    margin-top: 60px;
+    border-top: 2px solid silver;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+.divGrupoModulos {
+    width: 700px;
+    height: 100px;
+    border: 1px solid silver;
+    border-radius: 7px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-image: linear-gradient(to left, rgba(10, 8, 136, 0.486), rgba(241, 23, 223, 0.322), white, white, white);
+}
+
+.divGrupoModulos img {
+    width: 90px;
+    height: 90px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.divGrupoModulos p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 120px;
+    font-size: 22px;
+    margin-top: -60px;
+    color: rgb(14, 42, 167);
+}
+
+.divGrupoModulos a {
+    text-decoration: none;
+    background-color: rgb(24,24,24);
+    color: white;
+    font-weight: 400;
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    margin-left: 570px;
+    border-radius: 7px;
+    margin-top: -55px;
+    transition: 0.5s;
+}
+
+.divGrupoModulos a:hover {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(49, 49, 49);
+    color: rgb(14, 42, 167);
+}

@@ -16,7 +16,7 @@ class quizController extends Controller
         $geralUser          = db::Select('select count(*) as total from quiz.users where tipo_usuario =99;');
         $geralPergunta      = db::Select('select count(*) as total from quiz.perguntas;');
         $user               = db::Select('select * from users');
-        $grupos             = db::Select('select image, grupo from quiz.grupos;');
+        $grupos             = db::Select('select id, image, grupo from quiz.grupos order by grupo;');
 
         return view ('welcome', compact ('user','geralAdmin','geralUser','geralPergunta','grupos'));
     }
@@ -34,5 +34,21 @@ class quizController extends Controller
     public function visualizar() {
         
         return view ("perguntas.visualizar");
+    }
+
+    public function conteudo ($id) {
+        
+        $perguntas      = db::Select('select grupo from quiz.perguntas where grupo='.$id.' group by grupo');
+        $total          = db::Select('select * from quiz.perguntas where grupo='.$id);
+        $totalpergunta  = db::Select('select count(*) as total from quiz.perguntas where grupo='.$id);
+
+        return view ('perguntas.conteudo', ['id' => $id], compact ('perguntas','total','totalpergunta'));
+    }
+    
+    public function especifica($id) {
+
+        $pergunta   = db::Select('select * from perguntas where id='.$id);
+        
+        return view ('perguntas.especifica', ['id' => $id], compact ('pergunta'));
     }
 }
