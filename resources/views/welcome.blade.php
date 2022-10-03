@@ -11,6 +11,7 @@
     </head>
     <body>
 
+
     <div class="divHome">
         <h1>QUIZ - Perguntas dificeis</h1>
         <p>Um quiz que não existem perguntas certas ou erradas, você vai se deparar com perguntas que irão ser respondidas com "coração" e/ou consciência de cada um!
@@ -212,7 +213,7 @@
                     <div>
                         <x-jet-button class="ml-4">Cadastrar</x-jet-button>
                     </div>
-                    
+
                 </form>
             </x-jet-authentication-card>
         </div>
